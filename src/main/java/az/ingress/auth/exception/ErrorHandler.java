@@ -29,6 +29,14 @@ public class ErrorHandler {
         return new ErrorResponse(ex.getMessage());
     }
 
+    @ExceptionHandler(CustomFeignException.class)
+    public ResponseEntity<ErrorResponse> handle(CustomFeignException ex) {
+        log.error("CustomFeignException: ", ex);
+        return ResponseEntity
+                .status(ex.getHttpStatusCode())
+                .body(new ErrorResponse(ex.getMessage()));
+    }
+
     @ExceptionHandler(AuthException.class)
     public ResponseEntity<ErrorResponse> handle(AuthException ex) {
         log.error("AuthException: ", ex);

@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class CustomFeignException extends RuntimeException {
-    private final int statusCode;
+    private final int httpStatusCode;
 
-    public CustomFeignException(String message, int statusCode) {
+    public CustomFeignException(String message, int httpStatusCode) {
         super(message);
-        this.statusCode = statusCode;
+        this.httpStatusCode = httpStatusCode;
     }
 }

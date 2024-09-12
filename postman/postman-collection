@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "d8c8f9e0-281d-41a1-9abe-5187bf26e2a1",
+		"name": "ms.auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24624012"
+	},
+	"item": [
+		{
+			"name": "SIGN IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"turqud.quliyev\",\r\n    \"password\": \"turqud.quliyev\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/auth/sign-in",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"auth",
+						"sign-in"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"turqud.quliyev\",\r\n    \"password\": \"turqud.quliyev\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/auth/sign-in",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"auth",
+								"sign-in"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Sep 2024 05:26:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtcy1hdXRoIiwiZXhwIjoxNzI2MTE5Njk5MTkzLCJ1c2VySWQiOiIxIiwiaWF0IjoxNzI2MTE4Nzk5MTkzfQ.a0-J1BL99-9GKzGwgsBak7gTlrRXSeOaxooEScK35u3_Oa-VEL0HDnnkEYxMIHGGZIXEXxRAthJWxqkc8QOWa9Vtj9Id_CfEbxR19-J8Vk3MgKqcXNj4P7seQlSrGAs39uWbEvS6UiyZRhJ46Ct-XfUQfSvaB3Q7VA-83LQ9cFPbS25w45qTdcir7k2Sk9MVnk_5VpJPDwqCga34EfEUOQVFIjN1nO0xk9_ILMxat7NtWGuSSLQp06oWwY5vY3L3MLgRNW3b6E5wc5Z05oAZUOsSOY9Dr2iAAWj2GfC32nxDbfBTPg9qpaUuWQsMcA8VgiyLeEtLGCME9l67qBKmjA\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiJ9.eyJjb3VudCI6NTAsImlzcyI6Im1zLWF1dGgiLCJleHAiOjE3Mjc0MTQ3OTkxOTMsInVzZXJJZCI6IjEifQ.E_TtEmHLv8mx2-tIWzJQV8lCT6m8mpAEefv3yIXXXQN4P2Q9dJzxKWe1VJjdJdixSahV4ts3WS54D8WeHft9PhHqLLhZI4okcfmBzM8KGAJQGLDM-4AWNCwYVWqo-zYC-L4vblaibUTeCoPY4SE6IX4rtlqPURau3LK0MSphyYKJmgs7Fwfm7o3XVhN-4nh37_dBkjdGPrUBKtx30BBcx2dVHW9Jdc5kH09AIiu72S_Do4l1RN2SrVWCGDQ1D2CwrQLIOj3VdXpBRf4Xxrg8gQmoMWLto7qYcZhXpVnXk-zz4FKXbzySSJp5QVj9iykt92W-3GorqmYv2rSbKlfJfg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "REFRESH TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiJ9.eyJjb3VudCI6NTAsImlzcyI6Im1zLWF1dGgiLCJleHAiOjE3Mjc0MTQ3OTkxOTMsInVzZXJJZCI6IjEifQ.E_TtEmHLv8mx2-tIWzJQV8lCT6m8mpAEefv3yIXXXQN4P2Q9dJzxKWe1VJjdJdixSahV4ts3WS54D8WeHft9PhHqLLhZI4okcfmBzM8KGAJQGLDM-4AWNCwYVWqo-zYC-L4vblaibUTeCoPY4SE6IX4rtlqPURau3LK0MSphyYKJmgs7Fwfm7o3XVhN-4nh37_dBkjdGPrUBKtx30BBcx2dVHW9Jdc5kH09AIiu72S_Do4l1RN2SrVWCGDQ1D2CwrQLIOj3VdXpBRf4Xxrg8gQmoMWLto7qYcZhXpVnXk-zz4FKXbzySSJp5QVj9iykt92W-3GorqmYv2rSbKlfJfg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/token/refresh",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"token",
+						"refresh"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiJ9.eyJjb3VudCI6NTAsImlzcyI6Im1zLWF1dGgiLCJleHAiOjE3Mjc0MTQ3OTkxOTMsInVzZXJJZCI6IjEifQ.E_TtEmHLv8mx2-tIWzJQV8lCT6m8mpAEefv3yIXXXQN4P2Q9dJzxKWe1VJjdJdixSahV4ts3WS54D8WeHft9PhHqLLhZI4okcfmBzM8KGAJQGLDM-4AWNCwYVWqo-zYC-L4vblaibUTeCoPY4SE6IX4rtlqPURau3LK0MSphyYKJmgs7Fwfm7o3XVhN-4nh37_dBkjdGPrUBKtx30BBcx2dVHW9Jdc5kH09AIiu72S_Do4l1RN2SrVWCGDQ1D2CwrQLIOj3VdXpBRf4Xxrg8gQmoMWLto7qYcZhXpVnXk-zz4FKXbzySSJp5QVj9iykt92W-3GorqmYv2rSbKlfJfg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/token/refresh",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"token",
+								"refresh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Sep 2024 05:28:13 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtcy1hdXRoIiwiZXhwIjoxNzI2MTE5NzkyODQzLCJ1c2VySWQiOiIxIiwiaWF0IjoxNzI2MTE4ODkyODQzfQ.WEkAmKJt4o7p1Rr6Bd1JYpC8iK7S5hL5zmgvuH1AfIIcHbqQENy9DHrducCAb7GdWwkkUL9Min5OBjv-6Yh7KNh-zJB6ASHaSb6GDtQy2uGporG_hF7AL5QGzvpFzIdLFKiMX1BrM0WQGjsIjfNyBC_4XsG8NZIHABjR_MeTg-CszTbr6ukUSZec4msR6ptC47hgXchngBfBDUvZt4JIYCoTMP63RC4O4MBKKCmLwoR5TVYVzcw7-VyUW5XPQt4a42sFKfvpTrwljVxBtHgeQs0lNikdfuNqocmiPfxQq-xIPOyDs6WWqQarjLKkjPFP4Y5wSIjINoM5bhHbDVFdxQ\",\n    \"refreshToken\": \"eyJhbGciOiJSUzI1NiJ9.eyJjb3VudCI6NDksImlzcyI6Im1zLWF1dGgiLCJleHAiOjE3Mjc0MTQ4OTI4NDMsInVzZXJJZCI6IjEifQ.H-VM2pz-GAwwVx9ScXd2CZmcR3FONm-7y7-0DE9OHE2JKDODexnYDMjDeKbbkfImxHQE6igVRVF0nMyHdkX3xe3r6lg8KwcEwU197-cmHcy1FNnfbQT8vWxQELo_seHCfedf9PSxa0HsdrMyCTMJcXT0KUChfXvJlwvl64R90Ra3dq-5iW-Fwg2smYTB5S8M1YrCUslaGb8u2qjHyNXLGbwEtFvUEzNT6ui-kshYCuP-E5uXsHtWsJzPR-Ha_TdClcb0gfvZeRn4ox4j-V8mGbZUb3usVrnWNfw_UXBnCr1XYdD6uEjCF47erhEf66h9dhzyLX79-O8EE6OQGiruvQ\"\n}"
+				}
+			]
+		},
+		{
+			"name": "VERIFY TOKEN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtcy1hdXRoIiwiZXhwIjoxNzI2MTE5NzkyODQzLCJ1c2VySWQiOiIxIiwiaWF0IjoxNzI2MTE4ODkyODQzfQ.WEkAmKJt4o7p1Rr6Bd1JYpC8iK7S5hL5zmgvuH1AfIIcHbqQENy9DHrducCAb7GdWwkkUL9Min5OBjv-6Yh7KNh-zJB6ASHaSb6GDtQy2uGporG_hF7AL5QGzvpFzIdLFKiMX1BrM0WQGjsIjfNyBC_4XsG8NZIHABjR_MeTg-CszTbr6ukUSZec4msR6ptC47hgXchngBfBDUvZt4JIYCoTMP63RC4O4MBKKCmLwoR5TVYVzcw7-VyUW5XPQt4a42sFKfvpTrwljVxBtHgeQs0lNikdfuNqocmiPfxQq-xIPOyDs6WWqQarjLKkjPFP4Y5wSIjINoM5bhHbDVFdxQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/token/verify",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"token",
+						"verify"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SUCCESS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJtcy1hdXRoIiwiZXhwIjoxNzI2MTE5NzkyODQzLCJ1c2VySWQiOiIxIiwiaWF0IjoxNzI2MTE4ODkyODQzfQ.WEkAmKJt4o7p1Rr6Bd1JYpC8iK7S5hL5zmgvuH1AfIIcHbqQENy9DHrducCAb7GdWwkkUL9Min5OBjv-6Yh7KNh-zJB6ASHaSb6GDtQy2uGporG_hF7AL5QGzvpFzIdLFKiMX1BrM0WQGjsIjfNyBC_4XsG8NZIHABjR_MeTg-CszTbr6ukUSZec4msR6ptC47hgXchngBfBDUvZt4JIYCoTMP63RC4O4MBKKCmLwoR5TVYVzcw7-VyUW5XPQt4a42sFKfvpTrwljVxBtHgeQs0lNikdfuNqocmiPfxQq-xIPOyDs6WWqQarjLKkjPFP4Y5wSIjINoM5bhHbDVFdxQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8080/v1/token/verify",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"token",
+								"verify"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "User-Id",
+							"value": "1"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 Sep 2024 05:29:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}

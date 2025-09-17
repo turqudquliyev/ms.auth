@@ -1,0 +1,12 @@
+client:
+  urls:
+    ms-user: http://localhost:8081
+
+redis:
+  server:
+    urls: redis://localhost:6379
+
+token:
+  expiration:
+    access-token-minutes: 15
+    refresh-token-minutes: 21600

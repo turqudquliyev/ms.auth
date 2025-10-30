@@ -6,6 +6,7 @@ import az.ingress.auth.client.UserClient;
 import az.ingress.auth.model.dto.AuthResponse;
 import az.ingress.auth.model.request.AuthRequest;
 import az.ingress.auth.service.abstraction.AuthService;
+import az.ingress.auth.service.abstraction.TokenService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class AuthServiceHandler implements AuthService {
     private final UserClient userClient;
-    private final TokenServiceHandler tokenService;
+    private final TokenService tokenService;
 
     public AuthResponse signIn(AuthRequest authRequest) {
         var userResponseDto = userClient.getUserDetails(authRequest.getUsername());

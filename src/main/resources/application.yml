@@ -10,3 +10,4 @@ token:
   expiration:
     access-token-minutes: 15
     refresh-token-minutes: 21600
+    refresh-token-count: 50

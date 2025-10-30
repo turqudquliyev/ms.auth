@@ -15,4 +15,7 @@ public class TokenExpirationProperties {
 
     @NotNull
     private Integer refreshTokenMinutes;
+
+    @NotNull
+    private Integer refreshTokenCount;
 }

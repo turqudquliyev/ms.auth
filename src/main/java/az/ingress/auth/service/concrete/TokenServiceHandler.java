@@ -31,7 +31,7 @@ public class TokenServiceHandler implements TokenService {
     private final RedisProvider redisProvider;
 
     public AuthResponse prepareToken(String userId) {
-        final var refreshTokenExpirationCount = 50;
+        var refreshTokenExpirationCount = tokenExpirationProperties.getRefreshTokenCount();
         return generateToken(userId, refreshTokenExpirationCount);
     }
 

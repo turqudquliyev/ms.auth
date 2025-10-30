@@ -1,9 +1,9 @@
 package az.ingress.auth.util;
 
 import az.ingress.auth.exception.AuthException;
+import az.ingress.auth.logger.ApplicationLogger;
 import az.ingress.auth.model.constants.AuthConstants;
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 
 import java.security.KeyFactory;
 import java.security.KeyPair;
@@ -17,9 +17,10 @@ import static az.ingress.auth.model.constants.AuthConstants.KEY_SIZE;
 import static az.ingress.auth.model.constants.AuthConstants.RSA;
 import static org.springframework.util.Base64Utils.decodeFromString;
 
-@Slf4j
 public enum CertificateKeyUtil {
     CERTIFICATE_KEY_UTIL;
+
+    private final ApplicationLogger log = ApplicationLogger.getLogger(CertificateKeyUtil.class);
 
     public KeyPair generateKeyPair() {
         try {

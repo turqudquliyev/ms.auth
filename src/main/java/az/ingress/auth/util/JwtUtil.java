@@ -1,6 +1,7 @@
 package az.ingress.auth.util;
 
 import az.ingress.auth.exception.AuthException;
+import az.ingress.auth.logger.ApplicationLogger;
 import az.ingress.auth.model.jwt.RefreshTokenClaimsDto;
 import com.nimbusds.jose.JOSEException;
 import com.nimbusds.jose.JWSHeader;
@@ -9,7 +10,6 @@ import com.nimbusds.jose.crypto.RSASSAVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
 import lombok.SneakyThrows;
-import lombok.extern.slf4j.Slf4j;
 
 import java.security.PrivateKey;
 import java.security.PublicKey;
@@ -20,9 +20,10 @@ import static az.ingress.auth.exception.ErrorMessage.USER_UNAUTHORIZED;
 import static az.ingress.auth.util.MapperUtil.MAPPER_UTIL;
 import static com.nimbusds.jose.JWSAlgorithm.RS256;
 
-@Slf4j
 public enum JwtUtil {
     JWT_UTIL;
+
+    private final ApplicationLogger log = ApplicationLogger.getLogger(JwtUtil.class);
 
     public <T> String generateToken(T tokenClaimSet, PrivateKey privateKey) {
         try {

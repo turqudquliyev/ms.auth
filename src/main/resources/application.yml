@@ -1,13 +1,17 @@
+spring:
+  profiles:
+    active: ${RUN_ENVIRONMENT:local}
+
 client:
   urls:
-    ms-user: http://localhost:8081
+    ms-user: ${MS_USER:http://localhost:8081}
 
 redis:
   server:
-    urls: redis://localhost:6379
+    urls: redis://${REDIS_CONNECTION_IP:localhost}:${REDIS_CONNECTION_PORT:6379}
 
 token:
   expiration:
-    access-token-minutes: 15
-    refresh-token-minutes: 21600
-    refresh-token-count: 50
+    access-token-minutes: ${ACCESS_TOKEN_MINUTES:15}
+    refresh-token-minutes: ${REFRESH_TOKEN_MINUTES:21600}
+    refresh-token-count: ${REFRESH_TOKEN_COUNT:50}
